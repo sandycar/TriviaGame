@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>CA Trivia Game</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<body>
+	<!-- Main title on page with count down clock showing underneath it once the player clicks start -->
+	<div class = "container">
+		<h1>California Trivia!</h1>
+		<button id = "startButton"class="btn btn-warning">Start</button>
+		<p class= "clock"></p>
+		
+	</div>
+
+
+	<!-- <p>1+1</p> -->
+	<!-- Questions -->
+		<div id = "Questions" class= "container hidden">
+			<p>1. Apple has named it's previous 6 OS's after iconic locations of it's home state. In February 2012 Apple released Mac OS X 10.8, what was this version named after?</p>
+			<form id = "questionOne">
+			    <label class="radio-inline">
+			    <input value= "lion" type="radio" name="optradio1" checked> Lion
+			    </label>
+			    <label class="radio-inline">
+			      <input value= "tiger" type="radio" name="optradio1"> Tiger
+			    </label>
+			    <label class="radio-inline">
+			      <input type="radio" name="optradio1"> Panther
+			    </label>
+			    <label class="radio-inline">
+			      <input type="radio" name="optradio1"> Mountain Lion
+			    </label>
+			 </form>
+			<!-- Answers -->
+			<!-- <p>Lion, Tiger, Panther, or Mountain Lion</p> -->
+
+			<p>2. Which one of these news outlets is not headquartered in the Bay Area?</p>
+			<!-- Answers -->
+			<!-- <p>BuzzFeed, Wired,Tech Crunch, CNET</p> -->
+			<form id = "questionTwo">
+			    <label class="radio-inline">
+			    <input type="radio" name="optradio" checked> BuzzFeed
+			    </label>
+			    <label class="radio-inline">
+			      <input type="radio" name="optradio"> Wired
+			    </label>
+			    <label class="radio-inline">
+			      <input type="radio" name="optradio"> Tech Crunch
+			    </label>
+			    <label class="radio-inline">
+			      <input type="radio" name="optradio"> CNET
+			    </label>
+			 </form>
+
+			<p>3. In 2015 "Straight Outta Compton" was released in theaters featuring the rise and fall of west coast hip hop crew N.W.A. What other hip hop artists emerged straight out of Compton? </p>
+			<!-- Answers -->
+			<!-- <p>Snoop Dog, Kendrick Lamar, Too Short, SchoolBoy Q </p> -->
+			<form>
+			    <label id = "questionThree" class="radio-inline">
+			    <input type="radio" name="optradio" checked> Snoop Dog
+			    </label>
+			    <label class="radio-inline">
+			      <input type="radio" name="optradio"> Kendrick Lamar
+			    </label>
+			    <label class="radio-inline">
+			      <input type="radio" name="optradio"> Too $hort
+			    </label>
+			    <label class="radio-inline">
+			      <input type="radio" name="optradio"> SchoolBoy Q
+			    </label>
+			 </form>
+
+			<p>4. San Francisco was at the center of counter culture in the 1960s. Which band made it's start in this city during this time?</p>
+			<!-- Answers -->
+			<!-- <p>5. The Grateful Dead, The Sonics, The Velvet Underground, The Dead Kennedy's</p> -->
+			<form id = "questionFour">
+			    <label class="radio-inline">
+			    <input type="radio" name="optradio" checked> The Grateful Dead
+			    </label>
+			    <label class="radio-inline">
+			      <input type="radio" name="optradio"> The Sonics
+			    </label>
+			    <label class="radio-inline">
+			      <input type="radio" name="optradio"> The Velvet Underground
+			    </label>
+			    <label class="radio-inline">
+			      <input type="radio" name="optradio"> The Dead Kennedy's
+			    </label>
+			 </form>
+
+			<p>6. </p>
+
+		</div>
+
+		 
+<!-- 
+	<form>
+		<input type="radio" name="questionOne" value="2" required> 2<br>
+		<input type="radio" name="questionOne" value="4" required> 4<br>
+		<input type="radio" name="questionOne" value="6" required> 6
+
+		<button id = "doneButton">Done</button>
+	</form>
+	 -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src = "assets/javascript/game.js"></script> -->
+<script src = "assets/javascript/game.js" type="text/javascript">
+	
+</script>
+</body>
+</html>
