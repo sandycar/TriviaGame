@@ -8,14 +8,14 @@ $(document).ready(function(){
 		$("#startButton").hide()
 		$("#Questions").show()
 	})
-// 	$("#Questions").hide()
+	$("#Questions").hide()
 
 
 // // code for start button and hiding it after it's been clicked
-// $('#startButton').on('click', function(){
-// 	$("#Questions").show()
-// 	gameTimer = setInterval(countDown, 1000)
-	
+$('#startButton').on('click', function(){
+	$("#Questions").show()
+	gameTimer = setInterval(countDown, 1000)
+	})
 
 	// var questionAnswers =  $('<div>')
 	// var pTag = $('<p>hello</p>')
@@ -57,46 +57,94 @@ ques.forEach((e,i)=>{
 	// debugger
 	var q = `
 		<p>${i+1}. ${e} </p>
-			<form id = "question${i}">
+			<div id = "question${i}">
 			    <label class="radio-inline">
-			    <input value= "${anws[i][0]}" type="radio" name="optradio1" > ${anws[i][0]}
+			    <input value= "${anws[i][0]}" required type="radio" name="answer${i}" > ${anws[i][0]}
 			    </label>
 			    <label class="radio-inline">
-			      <input value= "${anws[i][1]}" type="radio" name="optradio1"> ${anws[i][1]}
+			      <input value= "${anws[i][1]}" required type="radio" name="answer${i}"> ${anws[i][1]}
 			    </label>
 			    <label class="radio-inline">
-			      <input value = "${anws[i][2]}" type="radio" name="optradio1"> ${anws[i][2]}
+			      <input value = "${anws[i][2]}" required type="radio" name="answer${i}"> ${anws[i][2]}
 			    </label>
 			    <label class="radio-inline">
-			      <input value = "${anws[i][3]}" type="radio" name="optradio1"> ${anws[i][3]}
+			      <input value = "${anws[i][3]}" required type="radio" name="answer${i}"> ${anws[i][3]}
 			    </label>
-			 </form>
+			 </div
 	`
 
 	$("#Questions").append(q)
 
 })
-
-
+var submitButton = $("<button>").attr("id","submit").attr("class","btn btn-warning").text("Submit")
+$("#Questions").append(submitButton);
 
 
 })
 
+submitButton.on('click', function(){
+	event.preventDefault();
+	alert('hi')
+})
+
+// var incorrect = 0
+// var correct = 0
+// function checker(){
+// 	$.each($("input[name='answer-0':checked]"), function() {
+// 	 if ($(this).val()===anws[0][3]){
+// 	 	correct++
+// 	 }else {
+// 	 	incorrect++
+// 	 }
+// 	alert(`correct ${correct} incorrect ${incorrect}`)
+     
+//     });
+
+// }
+
+// var correctAnswers= [
+// 					"Mountain Lion",
+// 					"BuzzFeed", 
+// 					"Kendrick Lamar", 
+// 					"The Dead Kennedy's",
+// 					"Anaheim", 
+// 					"Monterey County", 
+// 					"Carmel", 
+// 					"19", 
+// 					"Fortune cookie", 
+// 					"Mount Whitney"]
 
 
+
+$("#Questions").on("change", "#question9", function(){
+	alert("Hello")
+	$('#doneButton').on('click', function(){
+		for (var i=0; i<10; i++){
+			console.log(
+
+				$(`input[name='answer${i}']:checked`).val()
+				// $("input[name='gender']:checked").val()
+			
+
+			)
+
+		}
+	})
+})
 
 // code for starting timer after start button has been clicked
 
-// var gameClock = 5;
+// var gameClock = 30;
 //  function countDown(){
 //  	gameClock--;
 //  	if (gameClock<=0){
+//  		checker()
 //  		clearInterval(gameTimer)
 //  		alert("Game Over")
 //  	}
  		
 // 		$('.clock').text(gameClock);
-
+// }
 
 //  }
 
@@ -117,6 +165,6 @@ ques.forEach((e,i)=>{
 
 // // code for showing done button after last question has been answered
 // console.log("hello")
-// // $('#doneButton').on('click', function(){
+// // 
 
 // })

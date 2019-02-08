@@ -3,5 +3,12 @@
 }*/
 
 body {
-	background-image: url(assets/images/paintedladies.jpg)
+	background-image: url('../images/paintedladies.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	/*background: red;*/
+}
+
+#Questions {
+	background: rgba(255, 255, 255, 0.7);
 }
