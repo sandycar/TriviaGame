@@ -120,6 +120,7 @@ var correctAnswers= [
 var submitButton = $("<button>").attr("id","submit").attr("class","btn btn-warning").text("Submit")
 
 var score=0;
+var wrongAnswers=0;
 
 
 
@@ -138,11 +139,15 @@ $("#Questions").on("change", "#question9", function(){
 				score++
 			}else if( userAnswers!==correctAnswers[i]){
 				console.log("wrong answer")
+				wrongAnswers++
 			}
 		console.log(score + " total correct out of 10")
+		console.log(wrongAnswers + " total incorrect out of 10")
 		}
 		$("#Questions").hide()
-		$("#scoreCard").append("¡You got " + score + " out of 10 correct!")
+		$("#totalCorrect").append("¡You got " + score + " out of 10 correct!")
+		$("#totalIncorrect").append("and you got " + wrongAnswers + " out of 10 incorrect")
+
 		clearInterval(gameTimer)
 		$('.clock').hide()
 	})
