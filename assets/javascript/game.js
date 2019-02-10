@@ -23,8 +23,7 @@ $(document).ready(function(){
  	if (gameClock<=0){
  		clearInterval(gameTimer)
  		alert("Game Over")
- 	}
- 	// do we add an else if statement here to end the timer when the button submit is clicked?	
+ 	}	
 		$('.clock').text(gameClock);
 }
 
@@ -137,35 +136,21 @@ $("#Questions").on("change", "#question9", function(){
 			if ( userAnswers==correctAnswers[i]){
 				console.log("right answer")
 				score++
+			}else if( userAnswers!==correctAnswers[i]){
+				console.log("wrong answer")
 			}
-				
-
+		console.log(score + " total correct out of 10")
 		}
-		console.log(score)
+		$("#Questions").hide()
+		$("#scoreCard").append("¡You got " + score + " out of 10 correct!")
+		clearInterval(gameTimer)
+		$('.clock').hide()
 	})
 
 })
-	// debugger
-	// event.preventDefault();
-	// alert('hi')
-//})
 
 
-// var correctAnswers = 0;
-// var wrongAnswers = 0;
-// var questionsAnswered = 0;
-
- // $.each([`input[name='answer${i}']:checked`], function(index, value) {
- 	// console.log(this.value);
       
-    // });
-		// $.each([ 52, 97 ], function( index, value ) {
-		//   alert( index + ": " + value );
-		// });
+  
 
 
-// // code for showing done button after last question has been answered
-// console.log("hello")
-// // 
-
-// })
