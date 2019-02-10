@@ -2,6 +2,19 @@
 	display:none;
 }*/
 
+h1 {
+	padding: 50px;
+	color: white;
+	text-align: center;
+}
+
+.clock{
+	text-align: center;
+	font-size: 30px;
+	font: italic;
+	color: gold;
+}
+
 body {
 	background-image: url('../images/paintedladies.jpg');
 	background-size: cover;
